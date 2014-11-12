@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>main.cpp</file>
+        <file>pics/turn_indicator_left.png</file>
+        <file>pics/turn_indicator.png</file>
+        <file>pics/speed_inactive.png</file>
+        <file>pics/speed_active1.png</file>
+        <file>pics/rpm_inactive.png</file>
+        <file>pics/rpm_active1.png</file>
+        <file>pics/rpm_active.png</file>
+        <file>pics/petrol.png</file>
+        <file>pics/parkingLight.png</file>
+        <file>pics/overlay_inactive1.png</file>
+        <file>pics/overlay_active1.png</file>
+        <file>pics/overlay_active.png</file>
+        <file>pics/oilIndicator.png</file>
+        <file>pics/needle.png</file>
+        <file>pics/High_Beam_Indicator.png</file>
+        <file>pics/fuelneedle.png</file>
+        <file>pics/fuel_gauge.png</file>
+        <file>pics/Engine_start_stop_inactive.png</file>
+        <file>pics/Engine_start_stop_active.png</file>
+        <file>pics/dropDown.png</file>
+        <file>pics/Brake_failure.png</file>
+        <file>pics/battery_med.png</file>
+        <file>pics/battery_low1.png</file>
+        <file>pics/battery_low.png</file>
+        <file>pics/battery_full.png</file>
+        <file>SpeedDial.qml</file>
+        <file>RpmDial.qml</file>
+    </qresource>
+</RCC>
