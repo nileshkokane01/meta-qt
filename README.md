@@ -1,4 +1,4 @@
 meta-qt
 =======
 
-Project Involves code and samples of Qt-Qiuck and Qt-Widget Programs
+Project Involves code and samples of Qt-Quickk and Qt-Widget Programs
