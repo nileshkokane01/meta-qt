@@ -1,5 +1,6 @@
 import QtQuick 2.2
 import QtQuick.Window 2.1
+//import serialconsole 1.0
 
 
 
@@ -47,6 +48,10 @@ Window {
                GradientStop {
                    position: 0.33;
                    color: "#000000";
+               }
+               GradientStop {
+                   position: 0.52;
+                   color: "#ffffff";
                }
                GradientStop {
                    position: 0.70;
@@ -697,13 +702,16 @@ Window {
                         NumberAnimation {target:turn_left; properties: "opacity";to: 0 ;loops: 30 }
 
 
-
-
-
                 }
 
+ /*               serialconsole {
+                    id: aPieChart
+                    anchors.centerIn: parent
+                    width: 100; height: 100
+                    color: "red"
 
-
+                }
+*/
 
 
      }

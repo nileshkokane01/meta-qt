@@ -29,5 +29,9 @@
         <file>pics/battery_full.png</file>
         <file>SpeedDial.qml</file>
         <file>RpmDial.qml</file>
+        <file>pics/application-exit.png</file>
+        <file>pics/disconnect.png</file>
+        <file>pics/connect.png</file>
+        <file>pics/clear.png</file>
     </qresource>
 </RCC>
