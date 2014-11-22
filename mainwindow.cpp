@@ -29,7 +29,8 @@ MainWindow::MainWindow(QWidget *parent) :
             SLOT(handleError(QSerialPort::SerialPortError)));
 
     connect(serial, SIGNAL(readyRead()), this, SLOT(readData()));
-    connect(console, SIGNAL(getData(QByteArray)), this, SLOT(writeData(QByteArray)));
+    connect(console, SIGNAL(getData(int)), this, SLOT(setspeedData(int)));
+//  connect(console, SIGNAL(getData(QByteArray)), this, SLOT(writeData(QByteArray)));
 }
 
 MainWindow::~MainWindow()
@@ -88,6 +89,7 @@ void MainWindow::writeData(const QByteArray &data)
 
 void MainWindow::readData()
 {
+
     QByteArray data = serial->readAll();
     console->putData(data);
 }

@@ -1,6 +1,6 @@
 import QtQuick 2.2
 import QtQuick.Window 2.1
-//import serialconsole 1.0
+import serial 1.0
 
 
 
@@ -62,63 +62,10 @@ Window {
 
            function rpmSpeedMeter(){
 
-               rpm_dial.value = rpmValue
-               speed_dial.value = speedValue
-               if(gear == 0){
-               rpmValue = rpmValue + 5
-               speedValue = speedValue + 2
-                   gear = 1
-               }
-               else if(gear == 1){
-                   if(rpmValue > 60)
-                   {
-                       rpmValue = 30;
-                       speedValue = speedValue - 5
-                       gear = 2
-                   }
-                   rpmValue = rpmValue + 2.5
-                   speedValue = speedValue + 1.5
+               rpm_dial.value=w.speedData
+               console.log(w.speedData)
 
-
-               }
-               else if(gear == 2){
-                   if(rpmValue > 70)
-                   {
-                       rpmValue = 50;
-                       speedValue = speedValue - 4
-                       gear = 3
-                   }
-                   rpmValue = rpmValue + 2
-                   speedValue = speedValue + 1
-
-
-               }
-               else if(gear == 3){
-                   if(rpmValue > 80)
-                   {
-                       rpmValue = 60;
-                       speedValue = speedValue - 3
-//                     indicatorflash.running = true
-                       gear = 4
-                   }
-                   rpmValue = rpmValue + 1.5
-                   speedValue = speedValue + 0.5
-
-               }
-               else if(gear == 4){
-                   if(rpmValue > 90)
-                   {
-                       rpmValue = 70;
-                       speedValue = speedValue - 1
-                       gear = 4
-                   }
-                   rpmValue = rpmValue + 1
-                   speedValue = speedValue + 0.3
-               }
-               if(speedValue >120)
-               {
-                   rpmValue = speedValue = gear = 0
-               }
+  //             speed_dial.value = data
 
            }
 
@@ -704,11 +651,10 @@ Window {
 
                 }
 
- /*               serialconsole {
-                    id: aPieChart
-                    anchors.centerIn: parent
-                    width: 100; height: 100
-                    color: "red"
+ /*
+                serialdata {
+
+
 
                 }
 */

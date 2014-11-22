@@ -18,13 +18,20 @@ class SettingsDialog;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-//    Q_PROPERTY( Console console READ console)
+    Q_PROPERTY(int speedData READ speedData WRITE setspeedData)
 //    Q_PROPERTY( SettingsDialog settings READ settings)
       //Q_INVOKABLE void show();
 
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+
+
+
+    int speedData() const {
+          return m_data1;
+      }
 
 private slots:
     void openSerialPort();
@@ -34,6 +41,12 @@ private slots:
     void readData();
 
     void handleError(QSerialPort::SerialPortError error);
+    void setspeedData(const int data) {
+                m_data1=data;
+     }
+
+signals:
+    void data1Changed();
 
 private:
     void initActionsConnections();
@@ -43,6 +56,8 @@ private:
     Console *console;
     SettingsDialog *settings;
     QSerialPort *serial;
+    int m_data1;
+
 };
 
 

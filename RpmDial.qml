@@ -41,7 +41,7 @@ import QtQuick 2.2
 
 Item  {
     id: root
-    property real value : 0
+    property  var  value : 0
 
     width: 300; height: 300
 

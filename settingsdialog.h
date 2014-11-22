@@ -44,7 +44,7 @@ private slots:
     void apply();
     void checkCustomBaudRatePolicy(int idx);
 
-    void on_SettingsDialog_accepted();
+
 
 private:
     void fillPortsParameters();

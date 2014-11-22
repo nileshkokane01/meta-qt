@@ -16,14 +16,14 @@
 
 int main(int argc, char *argv[])
 {
- //   QGuiApplication app(argc, argv);
+//   QGuiApplication app(argc, argv);
 
-  //  serial = new QSerialPort(this);
-  //  qmlRegisterType<serial>("serial", 1, 0, "serial");
-  //  MainWindow w;
-  //  w.show();
+//   serial = new QSerialPort(this);
+     qmlRegisterType<MainWindow>("serial", 1, 0, "serialdata");
+//   MainWindow w;
+//   w.show();
 
-//    qmlRegisterType<MainWindow>("serialconsole", 1, 0, "MainWindow");
+//   qmlRegisterType<MainWindow>("serialconsole", 1, 0, "MainWindow");
      QApplication a(argc, argv);
 
 
@@ -31,8 +31,10 @@ int main(int argc, char *argv[])
 
 
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("w", &w);
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
-    w.setGeometry(20,20,20,20);
+
+  //  w.setGeometry(20,20,20,20);
     w.show();
     return a.exec();
 }
